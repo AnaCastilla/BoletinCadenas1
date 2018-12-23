@@ -16,15 +16,23 @@ public class Ej13 {
 		 * 4. Se muestran cuantas palabras hay en la cadena 
 		 */
 		
-		char space = ' ';
-		int word = 0, i = 0;
 		String s;
-		boolean isValid = false;
 		
 		//PRIMERA PARTE
 		//1. Se introduce una cadena
 		s = Keyboard.readString();
 		
+		System.out.printf("Número de palabras que tiene la cadena '%s': %d", s, numWords1stPart(s));
+		System.out.println();
+		System.out.printf("Número de palabras que tiene la cadena '%s': %d", s, numWords2ndPart(s));
+		
+		Keyboard.closeKeyboard();
+		
+	}
+	
+	public static int numWords1stPart(String s) { 
+		char space = ' ';
+		int word = 0, i = 0;
 		//2. Se comprueba si la cadena empieza con un espacio
 		if (s.charAt(0) == space) {
 			//2.1. Si es así, todavia no hay ninguna palabra
@@ -45,11 +53,15 @@ public class Ej13 {
 			i++;
 		}
 		//4. Se muestran cuantas palabras hay en la cadena 
-		System.out.printf("Número de palabras que tiene la cadena '%s': %d\n", s, word);
+		return word;
+	}
+	
+	public static int numWords2ndPart(String s) {
+		char space = ' ';
+		int word = 0, i = 0;
 		
 		//SEGUNDA PARTE (tiene básicamente casi los mismos pasos que la primera)
 		//Se reinicia el valor de i porque si no se seguiría usando el anterior
-		i = 0;
 		
 		//2. Se comprueba si la cadena empieza con un espacio
 		if (s.charAt(0) == space) {
@@ -79,7 +91,7 @@ public class Ej13 {
 			i++;
 		}
 		
-		System.out.printf("Número de palabras que tiene la cadena '%s': %d", s, word);
+		return word;
 
 	}
 }

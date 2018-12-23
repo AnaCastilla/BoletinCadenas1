@@ -11,13 +11,23 @@ public class Ej12 {
 		 */
 
 		String s1, s2;
-		int i = 0, appearance = 0, coincidentChar = 0;
+
 
 		//1. Introduce la cadena 1 
 		s1 = Keyboard.readString();
 		//2. Introduce la cadena 2 que será la que contará las veces que aparece en la cadena 1
 		s2 = Keyboard.readString();
 
+		System.out.println("La cadena 2 ha aparecido " + s2Appearance(s1, s2) + " veces");
+		
+		Keyboard.closeKeyboard();
+		
+	}
+	
+	public static int s2Appearance(String s1, String s2) {
+		
+		int i = 0, appearance = 0, coincidentChar = 0;
+		
 		// Las ponemos en minúsculas para evitar errores
 		s1 = s1.toLowerCase();
 		s2 = s2.toLowerCase();
@@ -50,9 +60,9 @@ public class Ej12 {
 		}
 
 		//3. Se muestra el número de veces que aparece la cadena 2 en la 1
-		System.out.println(appearance);
+		return appearance;
 
-		Keyboard.closeKeyboard();
+
 	}
 
 }

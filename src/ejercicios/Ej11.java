@@ -12,16 +12,25 @@ public class Ej11 {
 		 * 4. Sacar por pantalla el resultado
 		 */
 
-		String s, s2="";
-		char replaceChar, valorChar;
+		String s;
+		char replaceChar;
 
 		//1. Introducir por teclado la cadena y el carácter que queramos cambiar por un asterisco
 		s = Keyboard.readString();
 		System.out.println("Introduce el carácter que desea reemplazar: ");
 		replaceChar = Keyboard.readChar();
 
+		System.out.println(replaceAst(s, replaceChar));
+		
 		Keyboard.closeKeyboard();
 
+		
+	}
+	
+	public static String replaceAst(String s, char replaceChar) {
+		
+		String s2="";
+		char valorChar;
 		//Recorrer los caracteres de la cadena
 		for (int i = 0; i <= s.length() - 1; i++) {
 
@@ -40,7 +49,7 @@ public class Ej11 {
 		}
 
 		//4. Sacar por pantalla el resultado
-		System.out.println(s2);
+		return s2;
 	}
 
 }

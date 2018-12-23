@@ -9,12 +9,21 @@ public class Ej03 {
 		 * 2. Comprobamos carácter a carácter si es una vocal o no
 		 * 3. Mostramos el número de veces que han aparecido vocales en la cadena 
 		 */
-		
 		String s;
+		
+		s = Keyboard.readString();
+		
+		System.out.println("Hay " + numVocals(s) + " vocal(es)");
+		
+		Keyboard.closeKeyboard();
+	}
+	
+	public static int numVocals(String s) {
+		
 		int i, vocal = 0;
 		
 		//1. Introducir una cadena
-		s = Keyboard.readString();
+		
 		
 		for (i = 0; i < s.length(); i++) {
 			// 2. Comprobamos carácter a carácter si es una vocal o no
@@ -24,9 +33,7 @@ public class Ej03 {
 			}
 		}
 		//3. Mostramos el número de veces que han aparecido vocales en la cadena 		
-		System.out.println("Hay " + vocal + " vocal(es)");
-		
-		Keyboard.closeKeyboard();
+		return vocal;
 	}
 
 }
