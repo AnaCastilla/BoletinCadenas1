@@ -9,6 +9,11 @@ public class Ej04 {
 		 * 2. Se muestran las veces que ha aparecido dicho carácter
 		 */
 		
+		System.out.println("El carácter ha aparecido " + appeared() + " veces");
+		Keyboard.closeKeyboard();
+	}
+	
+	public static int appeared() {
 		String s;
 		int i, appearance = 0;
 		char c;
@@ -27,9 +32,8 @@ public class Ej04 {
 			}
 		}
 		//2. Se muestran las veces que ha aparecido dicho carácter
-		System.out.printf("El carácter '%c' ha aparecido %d veces", c, appearance);
+		return appearance;
 		
-		Keyboard.closeKeyboard();
 	}
 
 }
