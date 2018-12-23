@@ -8,21 +8,22 @@ public class Ej04 {
 		 * 1. Se le pide al usuario que introduzca una cadena y el carácter que quiere contar
 		 * 2. Se muestran las veces que ha aparecido dicho carácter
 		 */
+		String s;
+		char c;
+		//1. Se le pide al usuario que introduzca una cadena y el carácter que quiere contar
+		s = Keyboard.readString();
+		System.out.println("Introduce el carácter que quieres contar: ");				
+		c = Keyboard.readChar();
 		
-		System.out.println("El carácter ha aparecido " + appeared() + " veces");
+		System.out.println("El carácter ha aparecido " + appeared(s, c) + " veces");
+		
 		Keyboard.closeKeyboard();
 	}
 	
-	public static int appeared() {
-		String s;
+	public static int appeared(String s, char c) {
+		
 		int i, appearance = 0;
-		char c;
-		
-		//1. Se le pide al usuario que introduzca una cadena y el carácter que quiere contar
-		s = Keyboard.readString();
-		System.out.println("Introduce el carácter que quieres contar: ");
-		c = Keyboard.readChar();
-		
+			
 		//Se recorre la cadena letra por letra con este bucle
 		for (i = 0; i < s.length(); i++) {
 			//Por cada iteración del bucle se lee cada letra de la cadena en minúsculas y se comprueba si es igual al carácter introducido
