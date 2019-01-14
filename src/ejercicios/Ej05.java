@@ -35,7 +35,7 @@ public class Ej05 {
 			firstAppearance++;
 		}
 		
-		//Cuando se cumpla en bucle, tendremos la primera aparición de la letra 
+		//Cuando se cumpla el bucle, tendremos la primera aparición de la letra 
 		System.out.printf("La primera aparición de la letra '%c' es en la posición %d\n", c, firstAppearance+1);
 		
 		//En esta variable guardamos la longitud exacta (con el -1) de la cadena
@@ -52,7 +52,6 @@ public class Ej05 {
 		s2 = s.substring(firstAppearance+1, lastAppearance);
 		
 		//4. Se muestra el número de carácteres que hay entre la primera y la última aparición
-
 		return s2.length();
 
 	}
